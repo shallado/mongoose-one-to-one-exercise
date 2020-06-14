@@ -1,4 +1,5 @@
 const mongoose = require('mongoose');
+const Customer = require('./customer')(mongoose);
 
 mongoose.connect('mongodb://127.0.0.1/mongoose-one-to-one-exercise', {
   useNewUrlParser: true,
@@ -11,3 +12,7 @@ mongoose.connect('mongodb://127.0.0.1/mongoose-one-to-one-exercise', {
     message: 'Unable to connect to database',
     error: err
   }));
+
+module.exports = {
+  Customer
+};
