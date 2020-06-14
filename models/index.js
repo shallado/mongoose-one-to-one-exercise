@@ -1,5 +1,6 @@
 const mongoose = require('mongoose');
 const Customer = require('./customer')(mongoose);
+const Identifier = require('./identifier')(mongoose);
 
 mongoose.connect('mongodb://127.0.0.1/mongoose-one-to-one-exercise', {
   useNewUrlParser: true,
@@ -14,5 +15,6 @@ mongoose.connect('mongodb://127.0.0.1/mongoose-one-to-one-exercise', {
   }));
 
 module.exports = {
-  Customer
+  Customer,
+  Identifier
 };
